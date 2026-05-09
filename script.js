@@ -15,19 +15,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const downloadBtn = document.getElementById('download-btn');
 
-    // 1. 디자인 선택 이벤트 (라디오 버튼)
+    // 1. 디자인 선택 이벤트 (라디오 버튼 및 예시 문구 변경)
     designRadios.forEach(radio => {
         radio.addEventListener('change', (e) => {
             if (e.target.value === 'design1') {
-                bgImage.src = 'design1.png'; // 그린 배경
+                bgImage.src = 'design1.png';
                 cardWrap.className = 'theme-design1';
                 detailLabel.textContent = '체급 (복서)';
-                detailInput.placeholder = '예: 라이트급';
+                detailInput.placeholder = '플라이급 / 밴텀급 / 라이트급 / 웰터급 / 미들급 / 헤비급';
             } else {
-                bgImage.src = 'design2.png'; // 실버 배경
+                bgImage.src = 'design2.png';
                 cardWrap.className = 'theme-design2';
                 detailLabel.textContent = '포지션 (페어)';
-                detailInput.placeholder = '예: 페이스 메이커';
+                detailInput.placeholder = '바디 컨디셔너 / 페이스메이커';
             }
         });
     });
@@ -56,14 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. 완성본 다운로드 이벤트
     downloadBtn.addEventListener('click', () => {
-        // html2canvas 옵션: scale을 높여 고화질로 렌더링
         html2canvas(cardWrap, {
             scale: 3, 
             useCORS: true,
             backgroundColor: null
         }).then(canvas => {
             const link = document.createElement('a');
-            link.download = 'BoxingGym_ID_Card.png';
+            link.download = 'Yongho_Boxing_ID_Card.png';
             link.href = canvas.toDataURL('image/png');
             link.click();
         });
