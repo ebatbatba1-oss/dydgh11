@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const photoUpload = document.getElementById('photo-upload');
     const uploadedPhoto = document.getElementById('uploaded-photo');
+    const photoPlaceholder = document.getElementById('photo-placeholder');
 
     const nameInput = document.getElementById('name-input');
     const displayName = document.getElementById('display-name');
@@ -15,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const downloadBtn = document.getElementById('download-btn');
 
-    // 1. 디자인 선택 이벤트 (라디오 버튼 및 예시 문구 변경)
+    // 1. 디자인 선택 이벤트
     designRadios.forEach(radio => {
         radio.addEventListener('change', (e) => {
             if (e.target.value === 'design1') {
@@ -40,6 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
             reader.onload = function(event) {
                 uploadedPhoto.src = event.target.result;
                 uploadedPhoto.style.display = 'block';
+                // 사진이 업로드되면 자리표시자 텍스트 숨김
+                photoPlaceholder.style.display = 'none'; 
             }
             reader.readAsDataURL(file);
         }
