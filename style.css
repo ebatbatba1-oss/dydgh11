@@ -106,19 +106,20 @@ h2 {
     border-radius: 15px;
 }
 
-/* 1:1 비율 증명사진 위치 및 크기 조정 */
+/* 1:1 비율 증명사진 (기존 틀을 덮도록 크기 및 위치 조정) */
 #photo-area {
     position: absolute;
-    top: 25.4%;  
-    left: 34.5%; 
-    width: 31%;  
-    aspect-ratio: 1 / 1; /* 1:1 비율 강제 */
-    background-color: #f9f9f9; /* 사진 없을 때 기본 배경 */
+    top: 23%;     /* 기존 틀 위로 덮도록 상단 여백 줄임 */
+    left: 31%;    /* 기존 틀 왼쪽으로 덮도록 좌측 여백 줄임 */
+    width: 38%;   /* 크기를 키워서 덮음 */
+    aspect-ratio: 1 / 1; 
+    background-color: transparent;
     z-index: 2;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 4px; /* 테두리가 삐져나오지 않도록 아주 살짝 둥글게 */
 }
 
 #uploaded-photo {
