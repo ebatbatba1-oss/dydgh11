@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 bgImage.src = 'design2.png'; // 실버 배경
                 cardWrap.className = 'theme-design2';
                 detailLabel.textContent = '포지션 (페어)';
-                detailInput.placeholder = '예: 페이스 메이커';
+                detailInput.placeholder = '예: 미트잡이';
             }
         });
     });
