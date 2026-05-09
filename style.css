@@ -107,19 +107,21 @@ h2 {
 }
 
 /* 1:1 비율 증명사진 (기존 틀을 덮도록 크기 및 위치 조정) */
-#photo-area {
+.photo-area {
     position: absolute;
-    top: 23%;
+    top: 31%;
     left: 28%;
     width: 50%;
-    aspect-ratio: 1 / 1; 
-    background-color: transparent;
-    z-index: 2;
-    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 4px; /* 테두리가 삐져나오지 않도록 아주 살짝 둥글게 */
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+ border-radius: 4px; /* 테두리가 삐져나오지 않도록 아주 살짝 둥글게 */
 }
 
 #uploaded-photo {
