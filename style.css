@@ -110,8 +110,8 @@ h2 {
 #photo-area {
     position: absolute;
     top: 24.5%;  /* 위쪽 여백 조정하여 은색 테두리 상단 덮음 */
-    left: 28%;   /* 좌측 여백 조정하여 중앙 정렬 */
-    width: 60%;  /* 너비를 충분히 키워서 하단 테두리까지 완전히 덮음 */
+    left: 25%;   /* 좌측 여백 조정하여 중앙 정렬 */
+    width: 50%;  /* 너비를 충분히 키워서 하단 테두리까지 완전히 덮음 */
     aspect-ratio: 1 / 1; /* 1:1 비율 유지 */
     background-color: #ffffff; /* 불투명한 흰색 상자 */
     display: flex;
