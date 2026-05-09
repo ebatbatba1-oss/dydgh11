@@ -3,7 +3,8 @@
 }
 
 body {
-    font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
+    /* 폰트를 나눔고딕으로 변경 */
+    font-family: 'Nanum Gothic', sans-serif;
     background-color: #f0f2f5;
     margin: 0;
     padding: 40px 20px;
@@ -50,6 +51,7 @@ h2 {
     border: 1px solid #ddd;
     border-radius: 6px;
     font-size: 15px;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 .radio-group {
@@ -77,6 +79,7 @@ h2 {
     cursor: pointer;
     transition: background-color 0.2s;
     margin-top: 10px;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 #download-btn:hover {
@@ -142,7 +145,7 @@ h2 {
 
 #display-detail {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 /* 테마 1 (복서/그린) - 텍스트 색상 흰색 */
@@ -152,8 +155,8 @@ h2 {
     text-shadow: 1px 1px 3px rgba(0,0,0,0.6); /* 가독성을 위한 그림자 */
 }
 
-/* 테마 2 (페어/실버) - 텍스트 색상 다크그린 */
+/* 테마 2 (페어/실버) - 텍스트 색상을 더 진한 검정색으로 수정 */
 .theme-design2 #display-name,
 .theme-design2 #display-detail {
-    color: #1a4d2e;
+    color: #000000;
 }
