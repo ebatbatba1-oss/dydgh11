@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const downloadBtn = document.getElementById('download-btn');
 
-    // 1. 디자인 선택 이벤트
+    // 1. 디자인 선택 시 배경 및 플레이스홀더 변경
     designRadios.forEach(radio => {
         radio.addEventListener('change', (e) => {
             if (e.target.value === 'design1') {
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. 사진 업로드 및 미리보기 이벤트
+    // 2. 사진 업로드 시 미리보기
     photoUpload.addEventListener('change', (e) => {
         const file = e.target.files[0];
         if (file) {
@@ -41,14 +41,13 @@ document.addEventListener('DOMContentLoaded', () => {
             reader.onload = function(event) {
                 uploadedPhoto.src = event.target.result;
                 uploadedPhoto.style.display = 'block';
-                // 사진이 업로드되면 자리표시자 텍스트 숨김
                 photoPlaceholder.style.display = 'none'; 
             }
             reader.readAsDataURL(file);
         }
     });
 
-    // 3. 텍스트 실시간 반영 이벤트
+    // 3. 텍스트 실시간 출력
     nameInput.addEventListener('input', (e) => {
         displayName.textContent = e.target.value;
     });
@@ -57,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         displayDetail.textContent = e.target.value;
     });
 
-    // 4. 완성본 다운로드 이벤트
+    // 4. 다운로드 기능
     downloadBtn.addEventListener('click', () => {
         html2canvas(cardWrap, {
             scale: 3, 
@@ -65,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             backgroundColor: null
         }).then(canvas => {
             const link = document.createElement('a');
-            link.download = 'Yongho_Boxing_ID_Card.png';
+            link.download = 'Yongho_Boxing_Gym_Card.png';
             link.href = canvas.toDataURL('image/png');
             link.click();
         });
