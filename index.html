@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>용호 복싱체육관 사원증 생성기</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 이미지 캡처 및 다운로드를 위한 html2canvas 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- 좌측: 정보 입력 컨트롤 패널 -->
+        <div class="controls">
+            <h2>사원증 정보 입력</h2>
+
+            <div class="input-group">
+                <label>디자인 선택</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="design" value="design1" checked> 1번 (복서/그린)
+                    </label>
+                    <label>
+                        <input type="radio" name="design" value="design2"> 2번 (페어/실버)
+                    </label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="photo-upload">증명사진 업로드</label>
+                <input type="file" id="photo-upload" accept="image/*">
+            </div>
+
+            <div class="input-group">
+                <label for="name-input">이름 (나이)</label>
+                <input type="text" id="name-input" placeholder="예: 홍길동 (25)">
+            </div>
+
+            <div class="input-group">
+                <label id="detail-label" for="detail-input">체급 (복서)</label>
+                <input type="text" id="detail-input" placeholder="예: 라이트급">
+            </div>
+
+            <button id="download-btn">완성된 사진 다운로드</button>
+        </div>
+
+        <!-- 우측: 사원증 미리보기 화면 -->
+        <div class="preview">
+            <div id="card-wrap" class="theme-design1">
+                <!-- 배경 이미지 (저장한 이미지 파일명과 일치해야 합니다) -->
+                <img id="card-bg" src="design1.png" alt="사원증 배경">
+
+                <!-- 증명사진 영역 -->
+                <div id="photo-area">
+                    <img id="uploaded-photo" src="" alt="증명사진" style="display: none;">
+                </div>
+
+                <!-- 텍스트 영역 (이름, 체급/포지션) -->
+                <div id="text-area">
+                    <div id="display-name"></div>
+                    <div id="display-detail"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

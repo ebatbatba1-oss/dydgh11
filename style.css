@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.controls {
+    flex: 1;
+    min-width: 300px;
+}
+
+h2 {
+    margin-top: 0;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.input-group input[type="text"],
+.input-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+}
+
+.radio-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+#download-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a4d2e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+#download-btn:hover {
+    background-color: #123620;
+}
+
+.preview {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* 사원증 래퍼 - 기준이 되는 상대 좌표 생성 */
+#card-wrap {
+    position: relative;
+    width: 380px; /* 미리보기 크기 */
+    display: inline-block;
+}
+
+#card-bg {
+    width: 100%;
+    display: block;
+    border-radius: 15px; /* 모서리 둥글게 */
+}
+
+/* 증명사진 위치 및 크기 (비율로 지정하여 배경 이미지 크기에 대응) */
+#photo-area {
+    position: absolute;
+    top: 25.5%;  /* 상단 여백 비율 */
+    left: 34.5%; /* 좌측 여백 비율 */
+    width: 31%;  /* 사진 너비 비율 */
+    height: 29.5%; /* 사진 높이 비율 */
+    background-color: transparent;
+    z-index: 2;
+    overflow: hidden;
+}
+
+#uploaded-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 사진 비율 유지하며 영역에 꽉 차게 */
+}
+
+/* 텍스트 입력 영역 */
+#text-area {
+    position: absolute;
+    top: 61%; /* 텍스트 시작 위치 (기존 영어 텍스트 바로 아래) */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#display-name {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+#display-detail {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* 테마 1 (복서/그린) - 텍스트 색상 흰색 */
+.theme-design1 #display-name,
+.theme-design1 #display-detail {
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6); /* 가독성을 위한 그림자 */
+}
+
+/* 테마 2 (페어/실버) - 텍스트 색상 다크그린 */
+.theme-design2 #display-name,
+.theme-design2 #display-detail {
+    color: #1a4d2e;
+}
