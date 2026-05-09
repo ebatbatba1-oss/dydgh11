@@ -106,12 +106,12 @@ h2 {
     border-radius: 15px;
 }
 
-/* 증명사진 영역 - 원본 이미지의 흰색 박스 위치에 정확히 맞춤 */
+/* 증명사진 영역 - 은색 테두리 전체를 덮도록 크기를 키우고 중앙 정렬 */
 #photo-area {
     position: absolute;
-    top: 25.5%;  /* 상단 위치 조정 */
-    left: 34.5%; /* 좌측 위치 조정 */
-    width: 31%;  /* 너비 조정 */
+    top: 24.5%;  /* 위쪽 여백 조정하여 은색 테두리 상단 덮음 */
+    left: 28%;   /* 좌측 여백 조정하여 중앙 정렬 */
+    width: 44%;  /* 너비를 충분히 키워서 하단 테두리까지 완전히 덮음 */
     aspect-ratio: 1 / 1; /* 1:1 비율 유지 */
     background-color: #ffffff; /* 불투명한 흰색 상자 */
     display: flex;
@@ -125,7 +125,7 @@ h2 {
 
 #photo-placeholder {
     color: #bbb;
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
     font-weight: 700;
     line-height: 1.4;
