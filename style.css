@@ -109,9 +109,9 @@ h2 {
 /* 1:1 비율 증명사진 (기존 틀을 덮도록 크기 및 위치 조정) */
 #photo-area {
     position: absolute;
-    top: 23%;     /* 기존 틀 위로 덮도록 상단 여백 줄임 */
-    left: 31%;    /* 기존 틀 왼쪽으로 덮도록 좌측 여백 줄임 */
-    width: 38%;   /* 크기를 키워서 덮음 */
+    top: 23%;
+    left: 28%;
+    width: 44%;
     aspect-ratio: 1 / 1; 
     background-color: transparent;
     z-index: 2;
